@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Lily+Script+One&family=Oleo+Script+Swash+Caps&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:wght@900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    margin: 0 auto;
+}
+
+header {
+    padding:10px;
+    background-color: #FFE400;
+    margin-bottom: 20px;
+}
+
+.title-container {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* content */
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    text-align:center;
+}
+
+section {
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding:10px;
+    cursor:pointer;
+   
+
+}
+
+#content {
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.img-container {
+    margin-bottom: 10px;
+}
+.food-name-container {
+    margin-bottom: 10px;
+}
+
+.food-price-container {
+    margin-bottom:10px;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+}
+
+.btn-order-menu {
+    padding:8px;
+    font-size: 1.3em;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    cursor:pointer;
+    background-color: #F90716;
+    color:white;
+    position:fixed;
+   
+    bottom:10%;
+    left:0;
+    right:0;
+    margin:0 auto;
+}
+
+.form-qty {
+    font-size: 1.3rem;
+    padding:10px;
+    text-align:center;
+    width:20%;
+}
