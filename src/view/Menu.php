@@ -6,7 +6,7 @@
                 protected $foodName;
                 protected $price;
                 protected $orderCount=0;
-                protected static $orderMenu = 0;
+                private static $countMenu = 0;
 
                 // create constructor funct
                 public function __construct($image, $foodName, $price){
@@ -15,7 +15,7 @@
                     $this->image = $image;
                     $this->foodName = $foodName;
                     $this->price = $price;
-                    self::$orderMenu++;
+                    self::$countMenu++;
                 }
 
                 public function getImage() {
@@ -42,8 +42,8 @@
                 public function getTotalPrice() {
                     return $this->getPrice() * $this->getOrderCount();
                 }
-                public static function getOrderMenu() {
-                    return Menu::$orderMenu;
+                public static function getCountMenu() {
+                    return self::$countMenu;
                 }
 
              

@@ -19,8 +19,14 @@
     </header>
 
     <main>
+        <div class="title-menu">
+            <h1>
+               Jumlah item: <?php echo Menu::getCountMenu()?>
+            </h1>
+        </div>
             <div id='content'>
             <?php foreach($menus as $menu): ?>
+              
                 <section>
                     <div class="img-container">
                     <img src="<?php echo $menu->getImage()  ?>" alt="">
@@ -37,6 +43,21 @@
                             Rp.<?php echo $menu->getPrice() ?> /pcs
                         </h2>
                     </div>
+                    <?php if($menu instanceof Drink): ?> 
+                        <div class="drink-type-container" style="margin-bottom: 10px;">
+                        <h2>
+                            Jenis minuman : <?php echo $menu->getType() ?>
+                        </h2>
+                    </div>
+                        <?php else: ?>
+
+                            <div class="food-spiciness-container" style="margin-bottom: 10px;">
+                        <h2>
+                            Level kepedasan : <?php echo $menu->getSpiciness() ?>
+                        </h2>
+                    </div>
+
+                    <?php endif ?>
                   
                     <form method="post" action="./src/view/payment.php">
                      

@@ -23,6 +23,8 @@
             $menu->setOrderCount($quantity);
             $totalPayment += $menu->getTotalPrice();
             ?>
+        
+              
             <section>
             <div class="left-content">
             
@@ -49,6 +51,22 @@
                     Quantity: <?php echo $menu->getOrderCount() ?>
                 </h3>
             </div>
+
+            <?php if($menu instanceof Food): ?>
+            <?php $spiciness = $menu->getSpiciness() ?>
+            <div class="qty-container">
+                <h2>
+                    Level kepedasan: 
+             <?php for($i=0; $i < $spiciness; $i++): ?>
+                   <?php echo "🌶" ?> 
+            <?php endfor ?>
+            </h2>    
+        </div>
+            <?php endif ?>
+
+           
+          
+
             </div>
 
             </div>
@@ -61,6 +79,7 @@
             </div>
             
             </section>
+         
         <?php endforeach ?>
 
             <section class="total-payment-container">
