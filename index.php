@@ -33,9 +33,11 @@
                     </div>
 
                     <div class="food-name-container">
+                    <a href="./src/view/show.php?name=<?php echo $menu->getFoodName() ?>">
                         <h1>
                             <?php echo $menu->getFoodName() ?>
                         </h1>
+                        </a>
                     </div>
 
                     <div class="food-price-container">

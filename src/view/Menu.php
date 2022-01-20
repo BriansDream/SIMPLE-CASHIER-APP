@@ -46,6 +46,24 @@
                     return self::$countMenu;
                 }
 
+                public static function findByName($menus, $name){
+                    foreach($menus as $menu) {
+                        if($menu->getFoodName() == $name) {
+                            return $menu;
+                        }
+                    }
+                }
+
+                public function getReviews($reviews) {
+                    // create empty array
+                    $reviewsForMenu = array();
+                    foreach($reviews as $review) {
+                        if($review->getMenuName() == $this->foodName) {
+                            $reviewsForMenu[]=$review;
+                        }
+                    }
+                    return $reviewsForMenu;
+                }
              
             }
 ?>
