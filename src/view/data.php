@@ -21,18 +21,20 @@
 
 
     $menus = array($juice,$coffee,$mie,$sate);
+
     // Instance Users
     $user1 = new User("Alex","Pria");
     $user2 = new User("Fuji","Wanita");
     $user3 = new User("Romi","Pria");
-    $users = array($user1,$user2,$user3);
+    $user4 = new User("Alex","Wanita");
+    $users = array($user1,$user2,$user3,$user4);
 
     // instance review
-    $review1 = new Review($juice->getFoodName(), "Jus-nya Mantap",$user1->getName());
-    $review2 = new Review($coffee->getFoodName(), "Coffee Mantap",$user2->getName());
-    $review3 = new Review($mie->getFoodName(), "Mie'nya kenyal",$user3->getName());
-    $review4 = new Review($sate->getFoodName(), "Daging sate'nya lembut",$user1->getName());
-    $review5 = new Review($juice->getFoodName(), "Jus'nya basi",$user3->getName());
+    $review1 = new Review($juice->getFoodName(), "Jus-nya Mantap",$user1->getId());
+    $review2 = new Review($coffee->getFoodName(), "Coffee Mantap",$user2->getId());
+    $review3 = new Review($mie->getFoodName(), "Mie'nya kenyal",$user3->getId());
+    $review4 = new Review($sate->getFoodName(), "Daging sate'nya lembut",$user1->getId());
+    $review5 = new Review($juice->getFoodName(), "Jus'nya basi",$user4->getId());
     $reviews = array($review1,$review2,$review3,$review4,$review5);
 
     $juiceReviews =  $juice->getReviews($reviews);

@@ -24,19 +24,14 @@
                 return $this->menuName;
             }
 
-          
-
-            public function getUser($users){
-                foreach($users as $user) {
+            public function getUser($usersId){
+                foreach($usersId as $user) {
                     // get instance user dengan nama yang sama 
-                    if($user->getName() == $this->userName) {
+                    if($user->getId() == $this->userName) {
                         return $user;
                     }
                 }
             }
-
-
-
         }
         
 ?>

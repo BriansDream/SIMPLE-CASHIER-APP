@@ -60,26 +60,29 @@ require_once('review.php');
             </div>
             </div>
             <?php foreach($menuReviews as $menuReview): ?>
-                <?php foreach($menuReview as $menu): ?>
-                    <?php if($menu->getMenuName() == $name):  ?>
-                        <?php $user =  $menu->getUser($users) ?>
+                <?php foreach($menuReview as $review): ?>
+                    <?php if($review->getMenuName() == $name):  ?>
+                        <?php $user =  $review->getUser($users) ?>
                     
             <div class="right-content">
             <div>
-                <?php if($user->getGender() == "Pria"): ?>
+                <?php if($user->getGender() === "Pria"): ?>
                 <h1>👨 Name:
                     <?php echo $user->getName() ?>
                 </h1>
                 <?php else: ?>
                     <h1>👩 Name:
                     <?php echo $user->getName() ?>
+                    
+                 
                 </h1>
                 <?php endif ?>
             </div>
-        
+                
             <div>
                 <h1>Review:
-                    <?php echo $menu->getBodyReview()  ?>
+                    <?php echo $review->getBodyReview()  ?>
+                   
                 </h1>
                 </div>
             </div>

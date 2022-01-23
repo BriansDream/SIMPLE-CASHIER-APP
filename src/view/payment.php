@@ -3,8 +3,6 @@
     require_once('Menu.php');
     $totalPayment = 0;
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
